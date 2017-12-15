@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "address": "0x0028B6aE4a5383e018541E8E0dF2F239C2F74Cb4",
+    "name": "Basov Alexandr",
+    "free": false
+  },
+  {
+    "id": 1,
+    "address": "0xA07968E2dAE1E3c7fb6DC2a35B065173cF7508Fc",
+    "name": "Bogomazov Nikita",
+    "free": false
+  },
+  {
+    "id": 2,
+    "address": "0xCF935e675e4E4C34320FDB804F362E2C572E5d7d",
+    "name": "Danilov Konstantin",
+    "free": false
+  },
+  {
+    "id": 3,
+    "address": "0x00F39A111ed92FFE78090E480aB70E079d6f661F",
+    "name": "Insaurralde Andrés",
+    "free": false
+  },
+  {
+    "id": 4,
+    "address": "0x00Df3f469eAc552593bd8a4625ddb64421813718",
+    "name": "Khatipov Rinat",
+    "free": false
+  },
+  {
+    "id": 6,
+    "address": "0x00560D66784A52381c6687DcF687A37Ecc9cE1f5",
+    "name": "Makhmutov Zufar",
+    "free": false
+  },
+  {
+    "id": 7,
+    "address": "0x00ED8801cFBEcB050232BEa099bb77b5ECEDBb73",
+    "name": "Melnikov Almaz",
+    "free": false
+  },
+  {
+    "id": 8,
+    "address": "0x490473E7acd5b9C655105BB098CAEB77a927D9b1",
+    "name": "Mindubaev Ilfat",
+    "free": false
+  },
+  {
+    "id": 9,
+    "address": "0x7c25eE42853BC0CD70e54Ac82a9b6490B4914b24",
+    "name": "Negimatzhanov Aydar",
+    "free": false
+  },
+  {
+    "id": 10,
+    "address": "0x00e24B8394fb3d73858A9EbCA534fD98FAEbF46E",
+    "name": "Omarov Tamirlan",
+    "free": false
+  },
+  {
+    "id": 11,
+    "address": "0x95bE67bC0Be71A66Ba1a1B3bA27ef9F5C2f6c26f",
+    "name": "Rezin Ruslan",
+    "free": false
+  },
+  {
+    "id": 12,
+    "address": "0x00D38bBE45F75DD5BcC632e452a7E335933bBcA2",
+    "name": "Smolyakov Andrey",
+    "free": false
+  },
+  {
+    "id": 13,
+    "address": "0x0063579CC37173E09c87aD49B835088d518Bf11D",
+    "name": "Varnava Roman",
+    "free": false
+  },
+  {
+    "id": 14,
+    "address": "0x00683A153E069a3eFbbe9981C1d6240475A7c7C9",
+    "name": "Zakirov Anvar",
+    "free": false
+  },
+  {
+    "id": 15,
+    "address": "0x004120f424F83417C68109Cc8522594c22528d3c",
+    "name": "Zamaleev Ilgiz",
+    "free": false
+  }
+]
