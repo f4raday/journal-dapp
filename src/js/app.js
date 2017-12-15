@@ -115,6 +115,14 @@ addCodes: function(form) {
         });
 
     alert("Submiting " +codes.length + " codes.");
+  },
+
+  isOwner: function() {
+    var x = document.getElementById('form_codes');
+    if(web3.eth.accounts[0] == '0x008180d306621075d2f6f2369a3068b922e01a3b')
+      x.style.display = 'block';
+    else
+      x.style.display = 'none';
   }
 
 };
@@ -122,5 +130,6 @@ addCodes: function(form) {
 $(function() {
   $(window).load(function() {
     App.init();
+    App.isOwner();
   });
 });
