@@ -88,42 +88,45 @@ addCodes: function(form) {
   var codes = [];
   var values = [];
   for (var i = 0; i < form.length-1; i+=2) {
-      //console.log(form[i].value + form[i+1].value);\
-      var code = form[i].value;
-      var value = Number(form[i+1].value);
+    var code = web3.sha3(App.leftPad((Number(form[i].value)).toString(16), 64, 0), { encoding: 'hex' });
+    var value = Number(form[i+1].value);
 
-      if(code != '' && value != '') {
-        if(isNaN(value) || !isFinite(value)) {
-          alert("Value '" + form[i+1].value + "' is wrong at row " + (i/2+1) + ". Codes not sumbited");
-          return;
-        }
-        codes.push(code);
-        values.push(value);
+    if(code != '' && value != '') {
+      if(isNaN(value) || !isFinite(value)) {
+        alert("Value '" + form[i+1].value + "' is wrong at row " + (i/2+1) + ". Codes not sumbited");
+        return;
       }
+      console.log(code);
+      codes.push(code);
+      values.push(value);
     }
-    web3.eth.contract([{"constant": false,"inputs": [{"name": "hashes","type": "bytes32[]"},{"name": "amounts","type": "uint256[]"}],"name": "addCodes","outputs": [],"payable": false,"stateMutability": "nonpayable","type": "function"}]).
-    at('0x220392e76058BAd0798E16F16987093EBB0944DB').addCodes(codes, values, {
-            gas: 300000,
-            from: web3.eth.accounts[0]
-        }, (err, result) => {
-            if (result) {
-                console.log("Tx hash: ", result);
-                
-            } else {
-                console.log("Oopss.. Didn't work :(");
-            }
-        });
+  }
+  web3.eth.contract([{"constant": false,"inputs": [{"name": "hashes","type": "bytes32[]"},{"name": "amounts","type": "uint256[]"}],"name": "addCodes","outputs": [],"payable": false,"stateMutability": "nonpayable","type": "function"}]).
+  at('0x220392e76058BAd0798E16F16987093EBB0944DB').addCodes(codes, values, {
+    gas: 300000,
+    from: web3.eth.accounts[0]
+  }, (err, result) => {
+    if (result) {
+      console.log("Tx hash: ", result);
 
-    alert("Submiting " +codes.length + " codes.");
-  },
+    } else {
+      console.log("Oopss.. Didn't work :(");
+    }
+  });
 
-  isOwner: function() {
-    var x = document.getElementById('form_codes');
+  alert("Submiting " +codes.length + " codes.");
+},
+
+isOwner: function() {
+  var x = document.getElementById('form_codes');
     if(web3.eth.accounts[0] == '0x008180d306621075d2f6f2369a3068b922e01a3b')
       x.style.display = 'block';
     else
       x.style.display = 'none';
-  }
+  },
+  leftPad: function(string, width, padding) { 
+    return (width <= string.length) ? string : App.leftPad(padding + string, width, padding)
+  },
 
 };
 
